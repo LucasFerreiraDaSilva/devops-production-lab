@@ -1,0 +1,19 @@
+services:
+  site:
+    build: .
+    container_name: meu-site-compose
+    ports:
+      - "8082:80"
+    networks:
+      - minha-rede
+
+  api:
+    image: hashicorp/http-echo
+    container_name: minha-api
+    command: ["-text=Ola, sou a API!"]
+    networks:
+      - minha-rede
+
+networks:
+  minha-rede:
+    driver: bridge

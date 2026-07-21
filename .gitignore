@@ -1,0 +1,23 @@
+# Segredos e credenciais - NUNCA versionar
+*.pem
+*.key
+id_rsa
+id_ed25519
+.env
+*.env.local
+
+# Terraform (vamos usar na Fase 8)
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Logs
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
