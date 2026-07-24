@@ -15,7 +15,7 @@ Aprender DevOps na prática, entendendo o "porquê" de cada decisão técnica �
 - [x] Fase 3 — Docker Compose (múltiplos serviços, rede interna)
 - [x] Fase 4 — Git e GitHub
 - [x] Fase 5 — Nginx como Reverse Proxy, SSL e DNS
-- [ ] Fase 6 — CI/CD com GitHub Actions
+- [x] Fase 6 — CI/CD com GitHub Actions
 - [ ] Fase 7 — Observabilidade (Prometheus, Grafana, Loki, Alertmanager)
 - [ ] Fase 8 — Terraform (Infraestrutura como Código)
 - [ ] Fase 9 — Ansible (Configuração automatizada)
