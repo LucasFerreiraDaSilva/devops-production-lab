@@ -1,0 +1,22 @@
+name: CI - Build e Validacao
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do codigo
+        uses: actions/checkout@v4
+
+      - name: Build da imagem do site (base usada na Fase 5)
+        run: docker build -t meu-site:ci fase-03-compose
+
+      - name: Validar sintaxe do docker-compose (Fase 5)
+        run: docker compose -f fase-05-nginx-proxy/docker-compose.yml config
