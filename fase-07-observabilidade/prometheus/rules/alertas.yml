@@ -1,0 +1,11 @@
+groups:
+  - name: alertas-basicos
+    rules:
+      - alert: MemoriaDisponivelBaixa
+        expr: node_memory_MemAvailable_bytes < 500000000
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Memoria disponivel baixa na VM"
+          description: "Memoria disponivel esta abaixo de 500MB ha mais de 1 minuto."
