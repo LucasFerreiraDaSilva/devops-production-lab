@@ -17,7 +17,7 @@ Aprender DevOps na prática, entendendo o "porquê" de cada decisão técnica �
 - [x] Fase 5 — Nginx como Reverse Proxy, SSL e DNS
 - [x] Fase 6 — CI/CD com GitHub Actions
 - [x] Fase 7 — Observabilidade (Prometheus, Grafana, Loki, Alertmanager)
-- [ ] Fase 8 — Terraform (Infraestrutura como Código)
+- [x] Fase 8 — Terraform (Infraestrutura como Código)
 - [ ] Fase 9 — Ansible (Configuração automatizada)
 - [ ] Fase 10 — Azure (Cloud)
 - [ ] Fase 11 — Kubernetes
