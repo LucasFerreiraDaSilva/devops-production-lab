@@ -1,0 +1,29 @@
+---
+- name: Validar e garantir configuracao do ambiente Docker
+  hosts: servidores
+  become: true
+
+  vars:
+    usuario_docker: zabbix
+
+  tasks:
+    - name: Verificar se o Docker esta instalado
+      command: docker --version
+      register: docker_version_output
+      changed_when: false
+
+    - name: Garantir que o servico Docker esta rodando e habilitado
+      service:
+        name: docker
+        state: started
+        enabled: true
+
+    - name: Garantir que o usuario esta no grupo docker
+      user:
+        name: "{{ usuario_docker }}"
+        groups: docker
+        append: true
+
+    - name: Mostrar versao do Docker encontrada
+      debug:
+        msg: "{{ docker_version_output.stdout }}"

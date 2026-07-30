@@ -1,0 +1,45 @@
+---
+- name: Configuracao basica de servidor (replicando Fase 1)
+  hosts: servidores
+  become: true
+
+  tasks:
+    - name: Garantir que o pacote nginx esta instalado
+      apt:
+        name: nginx
+        state: present
+        update_cache: true
+
+    - name: Garantir que o UFW permite SSH
+      ufw:
+        rule: allow
+        name: OpenSSH
+
+    - name: Garantir que o UFW permite HTTP (porta 80)
+      ufw:
+        rule: allow
+        port: '80'
+        proto: tcp
+
+    - name: Garantir que o UFW esta ativo
+      ufw:
+        state: enabled
+
+    - name: Criar pagina HTML customizada via Ansible
+      copy:
+        content: |
+          <!DOCTYPE html>
+          <html>
+          <head><title>DevOps Lab - Fase 9</title></head>
+          <body>
+            <h1>Configurado via Ansible</h1>
+            <p>Esta pagina foi criada automaticamente por um playbook.</p>
+          </body>
+          </html>
+        dest: /var/www/html/index.html
+
+    - name: Garantir que o servico nginx esta rodando e habilitado
+      service:
+        name: nginx
+        state: started
+        enabled: true
