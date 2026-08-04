@@ -20,7 +20,7 @@ Aprender DevOps na prática, entendendo o "porquê" de cada decisão técnica �
 - [x] Fase 8 — Terraform (Infraestrutura como Código)
 - [ ] Fase 9 — Ansible (Configuração automatizada)
 - [x] Fase 10 — Azure (Cloud)
-- [ ] Fase 11 — Kubernetes
+- [x] Fase 11 — Kubernetes
 - [ ] Fase 12 — Alta disponibilidade, escalabilidade e SRE
 - [ ] Fase 13 — Segurança avançada
 - [ ] Fase 14 — Consolidação final
