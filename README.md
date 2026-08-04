@@ -22,7 +22,7 @@ Aprender DevOps na prática, entendendo o "porquê" de cada decisão técnica �
 - [x] Fase 10 — Azure (Cloud)
 - [x] Fase 11 — Kubernetes
 - [x] Fase 12 — Alta disponibilidade, escalabilidade e SRE
-- [ ] Fase 13 — Segurança avançada
+- [x] Fase 13 — Segurança avançada
 - [ ] Fase 14 — Consolidação final
 
 ## Documentação

@@ -21,3 +21,4 @@ Thumbs.db
 # Editores
 .vscode/
 .idea/
+secrets.yml
